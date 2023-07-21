@@ -64,6 +64,6 @@
     // Fermer la connexion
     $conn->close();
     ?>
-
+    <a href="addFiche.php">Ajouter une Fiche</a>
 </body>
 </html>
