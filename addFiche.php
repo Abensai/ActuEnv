@@ -34,6 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $sql = "INSERT INTO fiches (civility, name, firstname, address, postal_code, city, country, date_of_birth, phone, fax, email, url) VALUES ('$civility', '$name', '$firstname', '$address', '$postal_code', '$city', '$country', '$date_of_birth', '$phone', '$fax', '$email', '$url')";
 
     if ($conn->query($sql) === TRUE) {
+        header('Location: index.php');
         echo "Fiche ajoutée avec succès.";
     } else {
         echo "Erreur lors de l'ajout de la fiche : " . $conn->error;

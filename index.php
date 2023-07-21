@@ -36,7 +36,10 @@
                 <th>Fax</th>
                 <th>Email</th>
                 <th>URL</th>
+                <th>Modifier</th>
             </tr>";
+        $target = 'index.php'; // Ceci est le fichier qui existe actuellement
+        $link = 'updateFiche.php';  // Ceci sera le nom du fichier que vous voulez lier
 
         while ($row = $result->fetch_assoc()) {
             echo "<tr>
@@ -53,6 +56,7 @@
                 <td>{$row['fax']}</td>
                 <td>{$row['email']}</td>
                 <td>{$row['url']}</td>
+                <td><a href=\"updateFiche.php?id={$row['id']}\">Modifier</a></td>
             </tr>";
         }
 
